@@ -5,6 +5,7 @@
 </ion-header>
 
 <ion-content class="ion-padding">
+  <!-- Verifica si la latitud y longitud son válidas antes de mostrar los datos -->
   <div *ngIf="latitude !== null && longitude !== null">
     <ion-card>
       <ion-card-header>
@@ -22,6 +23,7 @@
     </ion-card>
   </div>
 
+  <!-- Mensaje si las coordenadas aún no están disponibles -->
   <div *ngIf="latitude === null && longitude === null">
     <p>Obteniendo ubicación...</p>
   </div>
